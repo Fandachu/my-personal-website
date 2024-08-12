@@ -1,0 +1,9 @@
+{
+  "common": {
+    "name": "Your Name",
+    "title": "Web Developer | Designer",
+    "welcome": "Welcome to my personal website! I'm passionate about creating beautiful and functional web experiences.",
+    "projects": "Projects",
+    "contact": "Contact"
+  }
+}
