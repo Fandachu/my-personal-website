@@ -11,6 +11,14 @@ export default function Home() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
+/*  const changeLanguage = (lang) => {
+    console.log('pathname:', pathname);
+    router.push({
+      pathname,
+      query: { locale: lang },
+    });
+  };*/
+
   const changeLanguage = (lang) => {
     const newSearchParams = new URLSearchParams(location.search);
     newSearchParams.set('locale', lang);
