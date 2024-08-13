@@ -3,15 +3,18 @@
 import Image from 'next/image';
 import { usePathname, useSearchParams } from 'next/navigation';
 import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/navigation';
 
 export default function Home() {
   const { t } = useTranslation('common');
   const pathname = usePathname();
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const changeLanguage = (lang) => {
-    searchParams.set('locale', lang);
-    const search = searchParams.toString();
+    const newSearchParams = new URLSearchParams(location.search);
+    newSearchParams.set('locale', lang);
+    const search = newSearchParams.toString();
     const url = `${pathname}?${search}`;
     router.push(url);
   };
